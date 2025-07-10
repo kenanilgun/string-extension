@@ -56,7 +56,6 @@ Below is a list of all extension methods provided by this library:
 | IsNullOrEmpty | Checks if the string is null or empty. |
 | IsNullOrWhiteSpace | Checks if the string is null, empty, or consists only of white-space characters. |
 | ToTitleCase | Converts the string to title case using the current culture. |
-| ToInt | Converts the string to an integer. Returns defaultValue if conversion fails. |
 | ToDouble | Converts the string to a double. Returns defaultValue if conversion fails. |
 | ToDecimal | Converts the string to a decimal. Returns defaultValue if conversion fails. |
 | ToDateTime | Converts the string to a DateTime. Returns defaultValue if conversion fails. |
@@ -78,8 +77,6 @@ Below is a list of all extension methods provided by this library:
 | Capitalize | Capitalizes the first letter of each word in the string. |
 | FirstCharacter | Gets the first character of the string, or '\0' if string is null or empty. |
 | LastCharacter | Gets the last character of the string, or '\0' if string is null or empty. |
-| Replace | Replaces all occurrences of the specified characters with an empty string. |
-| RemoveChars | Removes all specified characters from the string. |
 | Reverse | Reverses the string. |
 | CountOccurrences | Counts the number of occurrences of a substring in the string. |
 | EndsWithIgnoreCase | Checks if the string ends with the specified value, ignoring case. |
@@ -94,8 +91,6 @@ Below is a list of all extension methods provided by this library:
 | IsMinLength | Checks if the string length is at least the specified minimum. |
 | IsMaxLength | Checks if the string length is at most the specified maximum. |
 | IsLength | Checks if the string length is between the specified minimum and maximum. |
-| GetLength | Gets the length of the string, returns 0 if null. |
-| GetEmptyStringIfNull | Returns an empty string if the value is null. |
 | GetDefaultIfEmpty | Returns the default value if the string is null or empty. |
 | SplitTo | Splits the string by the given separator and converts each element to type T. |
 | ToEnum | Converts the string to the specified Enum type. Returns default(T) if conversion fails. |
@@ -107,7 +102,6 @@ Below is a list of all extension methods provided by this library:
 | QueryStringToDictionary | Converts a query string to a dictionary of key-value pairs. |
 | ReverseSlash | Reverses all backslashes and forward slashes in the string. |
 | ReplaceLineFeeds | Replaces all line feeds (\n) with the specified replacement. |
-| GetByteSize | Gets the byte size of the string using the specified encoding (default UTF8). |
 | ToTextElements | Converts the string to an enumerable collection of text elements (grapheme clusters). |
 | ParseStringToCsv | Escapes the string for CSV output by wrapping in quotes and escaping quotes. |
 | ContainsIgnoreCase | Checks if the string contains the specified substring, ignoring case. |

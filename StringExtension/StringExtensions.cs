@@ -43,14 +43,6 @@ namespace StringExtension
         }
 
         /// <summary>
-        /// Converts the string to an integer. Returns defaultValue if conversion fails.
-        /// </summary>
-        public static int ToInt(this string value, int defaultValue = 0)
-        {
-            return int.TryParse(value, out int result) ? result : defaultValue;
-        }
-
-        /// <summary>
         /// Converts the string to a double. Returns defaultValue if conversion fails.
         /// </summary>
         public static double ToDouble(this string value, double defaultValue = 0)
@@ -77,7 +69,7 @@ namespace StringExtension
         /// <summary>
         /// Converts the string to a boolean. Returns defaultValue if conversion fails.
         /// </summary>
-        public static bool ToBool(this string value, bool defaultValue = false)
+        public static bool ToBoolean(this string value, bool defaultValue = false)
         {
             return bool.TryParse(value, out bool result) ? result : defaultValue;
         }
@@ -123,14 +115,6 @@ namespace StringExtension
         public static short ToInt16(this string value, short defaultValue = 0)
         {
             return short.TryParse(value, out short result) ? result : defaultValue;
-        }
-
-        /// <summary>
-        /// Converts the string to a boolean. Returns defaultValue if conversion fails.
-        /// </summary>
-        public static bool ToBoolean(this string value, bool defaultValue = false)
-        {
-            return bool.TryParse(value, out bool result) ? result : defaultValue;
         }
 
         /// <summary>
@@ -222,26 +206,6 @@ namespace StringExtension
         public static char LastCharacter(this string value)
         {
             return !string.IsNullOrEmpty(value) ? value[value.Length - 1] : '\0';
-        }
-
-        /// <summary>
-        /// Replaces all occurrences of the specified characters with an empty string.
-        /// </summary>
-        public static string Replace(this string value, params char[] chars)
-        {
-            if (string.IsNullOrEmpty(value) || chars == null || chars.Length == 0) return value;
-            var sb = new StringBuilder(value.Length);
-            foreach (var c in value)
-                if (!chars.Contains(c)) sb.Append(c);
-            return sb.ToString();
-        }
-
-        /// <summary>
-        /// Removes all specified characters from the string.
-        /// </summary>
-        public static string RemoveChars(this string value, params char[] chars)
-        {
-            return value.Replace(chars);
         }
 
         /// <summary>
@@ -368,22 +332,6 @@ namespace StringExtension
         public static bool IsLength(this string value, int minLength, int maxLength)
         {
             return !string.IsNullOrEmpty(value) && value.Length >= minLength && value.Length <= maxLength;
-        }
-
-        /// <summary>
-        /// Gets the length of the string, returns 0 if null.
-        /// </summary>
-        public static int GetLength(this string value)
-        {
-            return value?.Length ?? 0;
-        }
-
-        /// <summary>
-        /// Returns an empty string if the value is null.
-        /// </summary>
-        public static string GetEmptyStringIfNull(this string value)
-        {
-            return value ?? string.Empty;
         }
 
         /// <summary>
